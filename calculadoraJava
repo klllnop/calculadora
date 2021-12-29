@@ -1,0 +1,26 @@
+import java.time.LocalTime; // import the LocalDate class
+import java.util.Scanner;
+
+public class CalcularMedia {
+    public static void main(String[] args) {
+        System.out.println("Bem vindo a nossa calculadora de médias. Para já só aceitamos até 2 valores.");
+
+        int n1, n2, media;
+
+        LocalTime dataatual = LocalTime.now();
+        Scanner myObj = new Scanner(System.in); // Create a Scanner object
+
+        System.out.println("Insere o teu nome: ");
+        String nome = myObj.nextLine();
+        System.out.println("Olá " + nome);
+
+        System.out.println("Insira um número:");
+        n1 = myObj.nextInt(); // Lê o input do utilizador
+
+        System.out.println("Insira outro número:");
+        n2 = myObj.nextInt(); // Lê o input do utilizador
+
+        media = (n1+n2)/2;
+        System.out.println("A média é: " + media + " e foi calculada na data " + dataatual); // Dá print na média
+    }
+}
